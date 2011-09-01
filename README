@@ -1,0 +1,17 @@
+OVERVIEW
+This library for Codeigniter enables and autoloads Redbean, a fantastic ORM for PHP (http://www.redbeanphp.com).
+As Redbean supports mysql, pgsql, and sqlite, this library allows for the same via its config file.
+
+INSTALLATION
+Copy the files into their respective folders within <codeigniter>/application/. If you have a custom autoload.php
+located in your config directory, please be sure to merge the file to prevent data loss.
+
+USAGE
+Open the config/redbean.php configuration file and set the appropriate values for the driver, host, database name,
+username, and password. If you are using sqlite, be sure to set the db_path variable.
+
+NOTES
+Redbean has some very nice options which are utilized via config entires. For example, if your environment variable
+is set to "production," then Redbean will freeze the schema so that no new tables will be created on the fly. Further,
+if you want to see the exact queries that Redbean is generating, you can change the value of 'rb_debug' to TRUE.
+This will interfere with session usage, so keep that in mind.
